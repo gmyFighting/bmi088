@@ -13,6 +13,7 @@
 #include <rtdevice.h> 
 #include <board.h>
 #include "drv_spi.h"
+#include <drv_gpio.h>
 
 #define BMI088_SPI_MAX_SPEED (10 * 1000 * 1000) // M
 #define CSB1_Pin GET_PIN(B, 14)
