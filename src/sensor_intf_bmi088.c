@@ -121,7 +121,7 @@ static rt_size_t _bmi088_get_data(rt_sensor_t sensor, struct rt_sensor_data *dat
  * 
  * @return the reading number.
  */
-static rt_size_t _bmi088_fetch_data(struct rt_sensor_device *sensor, void *buf, rt_size_t len)
+static RT_SIZE_TYPE _bmi088_fetch_data(struct rt_sensor_device *sensor, void *buf, rt_size_t len)
 {
     if (sensor->config.mode == RT_DEVICE_OFLAG_RDONLY)
     {
