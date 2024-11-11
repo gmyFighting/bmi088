@@ -12,13 +12,7 @@
 #define __SENSOR_INTF_BMI088_H__
 
 #include <rtthread.h>
-#if defined(RT_VERSION_CHECK)
-    #if (RTTHREAD_VERSION >= RT_VERSION_CHECK(5, 1, 0))
-        #include "drivers/sensor.h"
-    #else
-        #include "sensor.h"
-    #endif
-#endif
+#include <rtdevice.h>
 #include "BMI088.h"
 
 
