@@ -2,9 +2,6 @@
 #define __BMI088_H__
 
 #include <rtthread.h>
-#include "sensor.h"
-
-
 
 /*************************** Common Macros for both Accel and Gyro *****************************/
 // Bit #0  : Read/Write bit

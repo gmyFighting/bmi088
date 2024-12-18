@@ -6,9 +6,14 @@ Import('rtconfig')
 src   = []
 cwd   = GetCurrentDir()
 
+src += ['src/bmi088.c']
+
 # add bmi088 src files.
-src += Glob('src/sensor_intf_bmi088.c')
-src += Glob('src/bmi088.c')
+if GetDepend('PKG_BMI088_USING_SENSOR_V1'):
+    src += ['src/sensor_intf_bmi088.c']
+
+if GetDepend('PKG_BMI088_USING_SAMPLE'):
+    src += ['samples/bmi088_sample.c']
 
 # add bmi088 include path.
 path  = [cwd, cwd + '/inc']
