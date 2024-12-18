@@ -26,11 +26,11 @@ struct rt_sensor_data gyr_test;
 
 void imu_thread_entry(void* parameter)
 {
-    // ÅäÖÃspi,ÅäÖÃÆ¬Ñ¡Òı½Å(ÒªÔÚacc¡¢gyr³õÊ¼»¯Ö®Ç°ÅäÖÃ,ÒòÎªÆ÷¼ş³õÊ¼»¯ÖĞÉæ¼°µ½Òı½Å²Ù×÷)
+    // é…ç½®spi,é…ç½®ç‰‡é€‰å¼•è„š(è¦åœ¨accã€gyråˆå§‹åŒ–ä¹‹å‰é…ç½®,å› ä¸ºå™¨ä»¶åˆå§‹åŒ–ä¸­æ¶‰åŠåˆ°å¼•è„šæ“ä½œ)
     rt_hw_spi_device_attach(BMI088_BUS_NAME, BMI088A_SPI_NAME, GPIOB, GPIO_PIN_14);
     rt_hw_spi_device_attach(BMI088_BUS_NAME, BMI088G_SPI_NAME, GPIOB, GPIO_PIN_15);
 
-    // ×¢²á´«¸ĞÆ÷
+    // æ³¨å†Œä¼ æ„Ÿå™¨
     struct rt_sensor_config acc_cfg = {0};
     struct rt_sensor_config gyr_cfg = {0};
     
